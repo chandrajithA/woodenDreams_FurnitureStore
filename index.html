@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="woodenDreams.css">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Wooden Dreams</title>
+    <style>
+
+    .IndexPageDisplayPoster{
+        width: 100%;
+        margin-top: 15px;
+        position: relative;
+        & img{
+            width: 100%;
+            height: 70vh;
+        }
+    }
+
+    .indexPageWelcomeText{
+        position: absolute;
+        top: 9%;
+        right: 16%;
+        background-color: #FFF3E3;
+        border-radius: 10px;
+        padding: 25px 40px 20px 15px;
+        width: 400px;
+        margin: 0 0 0 50px;
+        & p:nth-child(1){
+            color: #000000; 
+            font-weight: 600;
+            letter-spacing: 3px; 
+            font-size: 14px;
+        }
+
+        & p:nth-child(2){
+            margin-top: 10px;
+            font-weight: 650;
+            font-size: 28px;
+            color:#B88E2F;
+            letter-spacing: 1px;
+        }
+
+        & p:nth-child(3){
+            color: #000000; 
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        & a{
+            display: block;
+            margin: auto;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 550;
+            background-color: #B88E2F;
+            color: #FFFFFF;
+            text-decoration: none;
+            text-align: center;
+            width: fit-content;
+        }
+    }
+
+    
+    
+
+
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbarShortIcon" id="navbarShortIcon" onclick="displayNavbar()">
+            <img src="image/menu_icon.png" alt="menu icon">
+        </div>
+        <div class="logoArea" id="logoArea" onclick="window.location.href='index.html'">
+            <img src="image/logo.png" alt="logo image">
+            <span class="companyName">Wooden  Dreams</span>
+        </div>
+        <nav class="headerNavbar" id="headerNavbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="">About Us</a>
+            <a href="">Categories</a>
+            <a href="">Shop</a>
+            <a href="">Blog</a>
+            <a href="">Contact</a>
+        </nav>
+        <div class="headerFunctionArea">
+            <div class="searchArea">
+                <img src="image/search_icon.png" alt="search icon">
+                <span>Search</span>
+            </div>
+            <img src="image/cart_icon.png" alt="cart icon">
+            <img src="image/wishlist_icon.png" alt="wishlist icon">
+            <button class="signInorSignUpbtn" id="signInorSignUpbtn">Sign Up / Sign in</button>
+        </div>
+    </header>
+    <main>
+        <div class="IndexPageDisplayPoster">
+            <img src="image/homepage_poster1.png" alt="display image">
+            <div class="indexPageWelcomeText">
+                <p>New Arrival</p>
+                <p>Discover Our New collection</p>
+                <p>Experience the art of wooden craftmanship in our latest collection</p>
+                <a href="shop.html">BUY NOW</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="woodenDreams.js"></script>
+    <script>
+        getCategoryData();
+    </script>
+</body>
+</html>

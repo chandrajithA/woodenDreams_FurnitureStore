@@ -17,14 +17,14 @@
         position: relative;
         & img{
             width: 100%;
-            height: 80vh;
+            height: 100vh;
         }
     }
 
     .indexPageWelcomeText{
         position: absolute;
-        top: 9%;
-        right: 16%;
+        top: 50px;
+        right: 80px;
         background-color: #FFF3E3;
         border-radius: 10px;
         padding: 25px 40px 20px 15px;
@@ -68,7 +68,42 @@
     }
 
     @media screen and (max-width:767.98px){
+        
+        .IndexPageDisplayPoster{
+            
+            & img{
+                height: 80vh;
+            }
+        }
+       
 
+        .indexPageWelcomeText{
+            top: 50px;
+            right: 30px;
+            padding: 15px 15px 10px 10px;
+            width: 280px;
+            & p:nth-child(1){
+                font-size: 12px;
+            }
+
+            & p:nth-child(2){
+                font-size: 24px;
+            }
+
+            & p:nth-child(3){
+                color: #000000; 
+                font-weight: 500;
+                font-size: 12px;
+                
+            }
+            & a{
+                
+                padding: 10px 20px;
+                
+                font-size: 12px;
+                
+            }
+        }
     }
 
     
@@ -108,7 +143,7 @@
     </header>
     <main>
         <div class="IndexPageDisplayPoster">
-            <img src="image/homepage_poster1.png" id="indesPagedisplayPoster" alt="display image">
+            <img src="image/homepage_poster1.png" alt="display image" id="indexPageDisplayPoster">
             <div class="indexPageWelcomeText">
                 <p>New Arrival</p>
                 <p>Discover Our New collection</p>
@@ -123,7 +158,7 @@
 
     <script src="woodenDreams.js"></script>
     <script>
-        setImageSize()
+        
     </script>
 </body>
 </html>

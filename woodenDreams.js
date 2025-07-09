@@ -21,3 +21,16 @@ async function getCategoryData(){
     let categoryData = await response.json();
     return categoryData;
 } 
+
+
+function setImageSize() {
+    const image = document.getElementById("indesPagedisplayPoster");
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    if (width > height) {
+        image.style.height = "80vh";
+    } else {
+        image.style.height = "40vh";
+    }
+}

@@ -19,6 +19,5 @@ document.addEventListener("click", function(event) {
 async function getCategoryData(){
     let response = await fetch("woodenDreamsCategory.json");
     let categoryData = await response.json();
-    console.log(categoryData);
-    
+    return categoryData;
 } 

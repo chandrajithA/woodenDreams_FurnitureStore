@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="woodenDreams.css">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Wooden Dreams</title>
+    <style>
+        header{
+            opacity: 0.5;
+        }
+
+        main{
+            position: relative;
+            & img{
+                
+                opacity: 0.5;
+            }
+        }
+        footer{
+            opacity: 0.5;
+        }
+        
+
+        @media screen and (min-height:900px) {
+            body{
+                overflow-y: hidden;
+            }
+        }
+
+        
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbarShortIcon" id="navbarShortIcon">
+            <img src="image/menu_icon.png" alt="menu icon">
+        </div>
+        <div class="logoArea" id="logoArea">
+            <img src="image/logo.png" alt="logo image">
+            <span class="companyName">Wooden  Dreams</span>
+        </div>
+        <nav class="headerNavbar" id="headerNavbar">
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Categories</a>
+            <a href="">Shop</a>
+            <a href="">Blog</a>
+            <a href="">Contact</a>
+        </nav>
+        <div class="headerFunctionArea">
+            <div class="searchArea">
+                <img src="image/search_icon.png" alt="search icon">
+                <span>Search</span>
+            </div>
+            <img src="image/cart_icon.png" alt="cart icon">
+            <img src="image/wishlist_icon.png" alt="wishlist icon">
+            <button class="signInorSignUpbtn" id="signInorSignUpbtn">Sign in</button>
+        </div>
+    </header>
+    <main>
+        <div class="signupPageDisplayPoster">
+            <img src="image/homepage_poster1.png" alt="display image" class="indexPagePoster1">
+        </div>
+        <div class="signuppage" id="signuppage">
+            <div class="signupcanceliconarea">
+                <img src="image/cancel_icon.png" alt="cancel icon" class="signupcancelicon" onclick="previouspage()">
+            </div>
+            <div class="signuparea">
+                <p >Create Account with Wooden Dreams</p>
+
+                <form id="signupform" novalidate>
+                    <input type="text" id="name" class="inputtext" required placeholder="Full Name">
+                    <div class="error" id="nameError"></div>
+
+                    <input type="email" id="email" class="inputtext" required placeholder="Email">
+                    <div class="error" id="emailError"></div>
+
+                    <input type="tel" id="phone" maxlength="10" class="inputtext" required placeholder="Phone">
+                    <div class="error" id="phoneError"></div>
+
+                    <input type="text" id="address" class="inputtext" required placeholder="Address">
+                    <div class="error" id="addressError"></div>
+
+                    <input type="text" id="city" class="inputtext" required placeholder="City">
+                    <div class="error" id="cityError"></div>
+
+                    <input type="tel" id="pincode" maxlength="6" class="inputtext" required placeholder="Pincode">
+                    <div class="error" id="pincodeError"></div>
+
+                    <input type="password" id="password" class="inputtext" required placeholder="Password">
+                    <div class="error" id="passwordError"></div>
+
+                    <div style="display: flex; justify-content: center;">
+                        <button type="submit" class="signupbtn">Sign Up</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="woodenDreams.js"></script>
+    <script>
+        document.getElementById("signupform").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let isValid = true;
+
+            // Clear all errors
+            document.querySelectorAll(".error").forEach(e => e.textContent = "");
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const address = document.getElementById("address").value.trim();
+            const city = document.getElementById("city").value.trim();
+            const pincode = document.getElementById("pincode").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            if (name === "") {
+                isValid = false;
+                document.getElementById("nameError").textContent = "Name is required.";
+            }
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                isValid = false;
+                document.getElementById("emailError").textContent = "Invalid Email Id";
+            }
+
+            if (!/^\d{10}$/.test(phone)) {
+                isValid = false;
+                document.getElementById("phoneError").textContent = "Enter a valid 10-digit Phone number.";
+            }
+
+            if (address.length < 10) {
+                isValid = false;
+                document.getElementById("addressError").textContent = "Address must be at least 10 characters.";
+            }
+
+            if (city === "") {
+                isValid = false;
+                document.getElementById("cityError").textContent = "City is required.";
+            }
+
+            if (!/^\d{6}$/.test(pincode)) {
+                isValid = false;
+                document.getElementById("pincodeError").textContent = "Enter a valid 6-digit pin code.";
+            }
+
+            if (password.length < 6) {
+                isValid = false;
+                document.getElementById("passwordError").textContent = "Password must be at least 6 characters.";
+            }
+
+            if (isValid) {
+                let userdetail = {"username":name,"useremail":email,"userphone":phone,"useraddress":address,"usercity":city,"userpincode":pincode,"userpassword":password}
+                let userdetaillist = JSON.parse(localStorage.getItem("wduserDetails")) || [];
+                userdetaillist.push(userdetail);
+                localStorage.setItem("wduserDetails",JSON.stringify(userdetaillist));
+                alert("User Details registered successfully");
+                previouspage()
+            }
+
+            this.reset();
+
+        });
+        
+    </script>
+</body>
+</html>

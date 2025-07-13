@@ -8,6 +8,8 @@
         body{
             font-family: poppins;
             background-color: #FFFFFF;
+            min-width: 320px;
+            
 
         }
    
@@ -105,7 +107,7 @@
         }
     
 
-    @media screen and (min-width:1024px) and (max-width:1200px) {
+    @media screen and (min-width:1025px) and (max-width:1200px) {
         header{
             gap: 30px;
         }
@@ -129,7 +131,7 @@
         }
     }
 
-    @media screen and (min-width:768px) and (max-width:1023.98px) {
+    @media screen and (min-width:769px) and (max-width:1024.98px) {
         header{
             gap: 30px;
         }
@@ -155,7 +157,7 @@
         }
     }
 
-    @media screen and (max-width:767.98px){
+    @media screen and (max-width:768.98px){
         header{
             gap: 10px;
             justify-content: space-between;
@@ -174,7 +176,7 @@
             background-color: #B88E2F;
             display: none;
             position: absolute;
-            top: 179px;
+            top: 168px;
             left: 0;
             gap: 0;
             width: 200px;
@@ -229,3 +231,611 @@
             font-size: 10px;
         }
     }
+
+
+    .IndexPageDisplayPoster{
+        width: 100%;
+        margin-top: 15px;
+        position: relative;
+        
+    }
+
+    .indexPagePoster1{
+            display: block;
+            width: 100%;
+            height: 800px
+    }
+
+    .indexPageWelcomeText{
+        position: absolute;
+        top: 10vh;
+        right: 15vw;
+        height: auto;
+        background-color: #FFF3E3;
+        border-radius: 10px;
+        padding: 25px 40px 20px 15px;
+        width: 400px;
+        margin: 0 0 0 50px;
+        & p:nth-child(1){
+            color: #000000; 
+            font-weight: 600;
+            letter-spacing: 3px; 
+            font-size: 18px;
+        }
+
+        & p:nth-child(2){
+            margin-top: 10px;
+            font-weight: 650;
+            font-size: 32px;
+            color:#B88E2F;
+            letter-spacing: 1px;
+        }
+
+        & p:nth-child(3){
+            color: #000000; 
+            font-weight: 500;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        & a{
+            display: block;
+            margin: 20px auto 0 auto;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 550;
+            background-color: #B88E2F;
+            color: #FFFFFF;
+            text-decoration: none;
+            text-align: center;
+            width: fit-content;
+        }
+    }
+
+
+    @media screen and (max-width:500px){
+            
+        .indexPageWelcomeText{
+            right: 10vw;
+            width: auto;
+        }
+    }
+
+
+
+
+
+/* login page main content */
+
+    .signinPageDisplayPoster .indexPagePoster1{
+        height:calc(100vh - 110px);
+    }
+
+
+    .loginpage{
+        width: 80vw;
+        height: auto;
+        position: absolute;
+        top: 300px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color:#FFF3E3;
+        border: 2px solid black;
+        border-radius: 20px;
+        opacity: 1;
+        
+    }
+
+    
+
+    .logincanceliconarea{
+        position: relative;
+    }
+
+    .logincancelicon{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 40px;    
+        display: block;
+        opacity: 1;
+    }
+    .logingrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+    }
+
+    .logintextarea{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+        & .logoimage{
+            mix-blend-mode: multiply;
+            background-color: transparent; 
+        }
+        & .logingridpara1{
+            color: #B88E2F;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 1000;
+            font-size: 3.5vw;
+            margin-top: 10px;
+            margin-left: 5%;
+            align-self: flex-start;
+        }
+        & .logingridpara2{
+            font-size: 1.5vw;
+            align-self: flex-end;
+            margin-right: 10%;
+            margin-top: 20px;
+        }
+        & .loginpagestyleimage{
+            width: 100%;
+            display: block;
+            mix-blend-mode: multiply;
+            background-color: transparent;
+        }
+        
+    }
+
+
+    .loginformheading{
+        margin-top: 7%;
+        font-weight: 600;
+        color: grey;
+        font-size: 2vw;
+    }
+
+    .emailidarea{
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        width: 80%;
+        color: #FFFFFF;
+        background-color: #B88E2F;
+        height: 60px;
+        margin-top: 50px;
+        font-size: 16px;
+    }
+
+    .passwordarea{
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        width: 80%;
+        color: #FFFFFF;
+        background-color: #B88E2F;
+        height: 60px;
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+    input:focus {
+        background-color: #B88E2F; 
+        color: #FFFFFF;           
+        outline: none;             
+    }
+
+    input::placeholder {
+        color: #FFFFFF;
+        opacity: 1;
+        
+    }
+
+    input:focus::placeholder {
+        color: transparent;
+    }
+
+    .remembermeAndSignupbtnarea{
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        display: flex; 
+        justify-content: space-between;
+        width: 100%;
+        
+    }
+    
+    .signuplink{
+        text-decoration: none;
+        color: #000000;
+        border-bottom: 2px solid #B88E2F;
+    }
+    .signinbtn{
+        cursor: pointer;
+        margin-top: 15px;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 10px;
+        background-color: #B88E2F;
+        color: #FFFFFF;
+        font-size: 16px;
+        margin-left: 25%;
+    }
+
+    @media screen and (max-width:1023.98px) {
+        .loginpage{    
+            top: 260px;  
+        }
+        
+    }
+
+    @media screen and (max-width:767.98px) {
+        .logincancelicon{
+            width: 30px;
+        }
+        .loginpage{
+            width: auto;
+            min-width: 300px;
+        }
+        .logingrid{
+            display: grid;
+            grid-template-columns: 1fr ;
+            padding: 20px;
+        }
+        .logintextarea{
+            display: none;
+        }
+        .loginformheading{
+            margin-top: 4vh;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .emailidarea{
+            width: 100%;
+            margin-top: 3vh;
+            
+        }
+
+        .passwordarea{
+            width: 100%;
+            margin-top: 3vh;
+        }
+
+        input::placeholder {
+            font-size: 14px;
+        }
+
+                
+        .signuplink{
+            text-decoration: none;
+        }
+        .signinbtn{
+            cursor: pointer;
+            margin-top: 15px;
+            margin-left: 30%;
+        }
+    }
+
+
+    @media screen and (max-height:1439.98px) {
+        .loginpage{    
+            top: 350px;  
+        }
+        .signinPageDisplayPoster .indexPagePoster1{
+            height:calc(100vh - 110px);
+        }
+        
+    }
+
+    @media screen and (max-height:1023.98px) {
+        .loginpage{    
+            top: 320px;  
+        }
+        .signinPageDisplayPoster .indexPagePoster1{
+            height:calc(100vh - 110px);
+        }
+        
+        
+    }
+
+    @media screen and (max-height:767.98px) {
+        .loginpage{    
+            top: 220px;  
+        }
+        .signinPageDisplayPoster .indexPagePoster1{
+            height:calc(100vh - 110px);
+        }
+        
+        
+    }
+
+
+    /* sign up page main content */
+
+        .signupPageDisplayPoster .indexPagePoster1{
+            height:calc(110vh - 120px);
+        }
+
+        
+
+        .signuppage{
+            width: 50vw;
+            height: auto;
+            position: absolute;
+            top: 350px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color:#FFF3E3;
+            border: 2px solid black;
+            border-radius: 20px;
+            opacity: 1;
+            min-width: 300px;
+        }
+
+        .signupcanceliconarea{
+            position: relative;
+        }
+
+        .signupcancelicon{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 40px;    
+            display: block;
+            opacity: 1;
+        }
+
+        .signuparea{
+            padding: 20px 20px 0 20px;
+            & p{
+                text-align: center; margin-top: 50px;font-size: 26px; font-weight: 600;
+            }
+        }
+
+        form {
+            padding: 30px 20px 10px 20px; 
+            font-size: 16px;
+        
+        }
+        .inputtext {
+            width: 100%;
+            padding: 10px;
+            margin : 20px 0 0 0;
+            border-radius: 5px;
+            background-color: #B88E2F;
+            border: none;
+            font-size: 16px;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        .signupbtn {
+            margin: 20px 0;
+            padding: 10px 20px;
+            color: black;
+            border: 2px solid grey;
+            border-radius: 5px;
+            background-color: #B88E2F;
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        @media screen and (max-width:1439.98px) {
+            .signuppage{    
+                top: 350px;  
+            }
+        }
+
+        @media screen and (max-width:1023.98px) {
+            .signuppage{    
+                top: 370px;  
+            }
+            .signuppage form {
+                padding: 20px 0; 
+            }
+        }
+
+         @media screen and (max-width:767.98px) {
+            .signuparea{
+
+                & p{
+                    text-align: center; margin-top: 50px;font-size: 24px; font-weight: 600;
+                }
+            }
+        }
+
+        @media screen and (min-height:1024px) {
+            
+            .signuppage{
+                width: 50vh;
+            }
+        }
+
+
+        /*   category section  */
+
+        .categorysection h1{
+            text-align: center;
+            color: #B88E2F;
+            margin-top: 30px;
+            font-size: 36px;
+            padding: 10px;
+        }
+
+        .categorysection p{
+            text-align: center;
+            color: grey;
+            margin-top: 30px;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 10px;
+        }
+    
+        .displaycategoryarea{
+            display: grid;
+            grid-template-columns: repeat(4,minmax(230px,1fr));
+            justify-content: center;
+            align-content: center;
+            gap: 20px;
+            padding: 20px 80px;
+            max-width: 1784px;
+            min-width: 320px;
+            margin: auto;
+            
+        }
+
+        .displaysinglecategory{
+            border: none;
+            background-color: transparent;
+            text-align: center;
+            margin-top: 20px;
+            cursor: pointer;
+            
+        }
+
+        .displaysinglecategory .categoryimage{
+            padding: 30px 20px;
+            background-color: #FFF3E3;
+            height: 320px;
+            & img{
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+            
+        }
+
+        .displaysinglecategory .categoryname{
+            margin-top: 30px;
+            & span{
+                display: block;
+                color: #B88E2F;
+                font-size: 26px;
+                font-weight: 600;
+            }
+        }
+
+        .indexpagecategorysection .displaysinglecategory:nth-child(n+9) {
+            display: none;
+        }
+
+        @media screen and (max-width:1024.98px) {
+            .displaycategoryarea{
+                grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+                gap: 20px;
+                padding: 15px 30px;
+            }
+
+            .displaysinglecategory .categoryimage{
+                padding: 20px 15px;
+                height: 280px;
+            }
+        }
+
+        @media screen and (max-width:768.98px) {
+            .displaycategoryarea{
+                grid-template-columns: repeat(3,minmax(130px,1fr));
+                gap: 20px;
+                padding: 20px 30px;
+            }
+
+            .displaysinglecategory .categoryimage{
+                padding: 15px 10px;
+                height: 220px;
+            }
+
+            .displaysinglecategory .categoryname{
+                margin-top: 15px;
+                & span{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
+
+            .indexpagecategorysection .displaysinglecategory:nth-child(n+7) {
+                display: none;
+            }
+        }
+        
+
+
+        @media screen and (max-width:425.98px) {
+            .categorysection h1{
+                font-size: 30px;
+                
+            }
+
+            .categorysection p{
+                font-size: 16px;
+                
+            }
+
+            .displaycategoryarea{
+                grid-template-columns: repeat(2,minmax(100px,1fr));
+                gap: 15px;
+                padding: 15px 20px;
+                justify-content: space-evenly;
+            }
+
+            .displaysinglecategory .categoryimage{
+                padding: 15px 10px;
+                height: 210px;
+            }
+
+            .displaysinglecategory .categoryname{
+                margin-top: 15px;
+                & span{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
+
+            .indexpagecategorysection .displaysinglecategory:nth-child(n+7) {
+                display: none;
+            }
+
+        }
+
+        @media screen and (max-width:375.98px) {
+            .categorysection h1{
+                font-size: 30px;
+                
+            }
+
+            .categorysection p{
+                font-size: 16px;
+                
+            }
+
+            .displaycategoryarea{
+                grid-template-columns: repeat(2,minmax(100px,1fr));
+                justify-content: space-evenly;
+            }
+
+            .displaysinglecategory .categoryimage{
+                height: 180px;
+            }
+
+            .displaysinglecategory .categoryname{
+                margin-top: 15px;
+                & span{
+                    font-size: 18px;
+                }
+            }
+        }
+
+        @media screen and (max-width:320px) {
+            .displaysinglecategory .categoryimage{
+                height: 150px;
+            }
+            .displaysinglecategory .categoryname{
+                margin-top: 10px;
+                & span{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        
+
+        
+
+        
+    

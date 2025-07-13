@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="woodenDreams.css">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Wooden Dreams</title>
+    <style>
+        header{
+            opacity: 0.5;
+        }
+        body{
+            overflow-y: hidden;
+        }
+        main{
+            position: relative;
+            & img{
+                
+                opacity: 0.5;
+            }
+        }
+        footer{
+            opacity: 0.5;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbarShortIcon" id="navbarShortIcon">
+            <img src="image/menu_icon.png" alt="menu icon">
+        </div>
+        <div class="logoArea" id="logoArea">
+            <img src="image/logo.png" alt="logo image">
+            <span class="companyName">Wooden  Dreams</span>
+        </div>
+        <nav class="headerNavbar" id="headerNavbar">
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Categories</a>
+            <a href="">Shop</a>
+            <a href="">Blog</a>
+            <a href="">Contact</a>
+        </nav>
+        <div class="headerFunctionArea">
+            <div class="searchArea">
+                <img src="image/search_icon.png" alt="search icon">
+                <span>Search</span>
+            </div>
+            <img src="image/cart_icon.png" alt="cart icon">
+            <img src="image/wishlist_icon.png" alt="wishlist icon">
+            <button class="signInorSignUpbtn" id="signInorSignUpbtn">Sign in</button>
+        </div>
+    </header>
+    <main>
+        <div class="signinPageDisplayPoster">
+            <img src="image/homepage_poster1.png" alt="display image" class="indexPagePoster1">
+        </div>
+        <div class="loginpage" id="loginpage">
+            <div class="logincanceliconarea">
+                <img src="image/cancel_icon.png" alt="cancel icon" class="logincancelicon" onclick="previouspage()">
+            </div>
+            <div class="logingrid">
+                <div class="logintextarea">
+                    <img src="image/logo.png" alt="logo image" class="logoimage">
+                    <p class="logingridpara1">Wooden Dreams</p>
+                    <p class="logingridpara2">Welcome's You !</p>
+                    <img src="image/loginpage_image.png" alt="" class="loginpagestyleimage">
+                </div>
+                <div class="loginformarea">
+                    <h2 class="loginformheading">Log In</h2>
+                    <form action="" id="signinform">
+                        <input type="text" id="useridarea" class="emailidarea" placeholder="Enter your Email Address">
+                        <div class="error" id="usernameError"></div>
+                        <input type="password" id="userpasswordarea" class="passwordarea" placeholder="Enter Password">
+                        <div class="error" id="passwordError"></div>
+                        <div class="remembermeAndSignupbtnarea">
+                            <label for="rememberme" style="margin-left: 5px;"><input type="checkbox" id="rememberme"> Remember Me</label>
+                            <a href="signup.html" class="signuplink">Sign Up</a><br>
+                        </div>
+                        <button type="submit" class="signinbtn">Sign In</button>
+                        <div class="error" id="SignInError"></div>
+                    </form>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="woodenDreams.js"></script>
+    <script>
+        document.getElementById("signinform").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+
+            // Clear previous errors
+            document.querySelectorAll(".error").forEach(e => e.textContent = "");
+
+
+            const username = document.getElementById("useridarea").value.trim();
+            const password = document.getElementById("userpasswordarea").value.trim();
+
+
+            let isValid = true;
+
+            if (username === "") {
+                isValid = false;
+                document.getElementById("usernameError").textContent = "Email id is required.";
+            }
+
+            if (password === "") {
+                isValid = false;
+                document.getElementById("passwordError").textContent = "Password is required..";
+            }
+
+            if (isValid) {
+                // For now, simulate login success
+                let userdetails = JSON.parse(localStorage.getItem("wduserDetails")) || [];
+
+                if(userdetails.length === 0){
+                    alert("Please Sign Up first.")
+                }
+                
+                userdetails.forEach(users => {
+                    if( username === users.useremail ){
+                        
+                    if(password === users.userpassword ){
+                        signin(username)
+                    }
+                    else{
+                        document.getElementById("SignInError").textContent = "Sign In Credentials are invalid. Try again";
+                    }
+
+                    }else{
+                        document.getElementById("SignInError").textContent = 'User id not found. If not register, please "Signup"';
+                    }
+                });
+
+            this.reset();
+            }
+
+        });
+    </script>
+</body>
+</html>

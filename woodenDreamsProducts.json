@@ -1,0 +1,93 @@
+[
+    {
+        "productid":1,"name":"Syltherine","shortdesc":"Stylish cafe chair","price":2500,"highprice":3500,"category":"Chairs",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/best_sellers/syltherine.png","division":"bestsellers"
+    },
+
+    {
+        "productid":2,"name":"Lolito","shortdesc":"Luxury big Sofa","price":7000,"highprice":14000,"category":"Sofa",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/best_sellers/lolito.png","division":"bestsellers"
+    },
+
+    {
+        "productid":3,"name":"Pingky","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Sofa",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/best_sellers/pingky.png","division":"bestsellers"
+    },
+
+    {
+        "productid":4,"name":"Grifo","shortdesc":"Night lamp","price":1500,"highprice":"","category":"Decor",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/best_sellers/grifo.png","division":"bestsellers"
+    },
+
+    {
+        "productid":5,"name":"Leviosa","shortdesc":"Stylish cafe chair","price":2500,"highprice":"","category":"Chairs",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/best_sellers/leviosa.png","division":"bestsellers"
+    },
+
+    {
+        "productid":6,"name":"Patio","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Chairs",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/best_sellers/patio1.png","division":"bestsellers"
+    },
+
+    {
+        "productid":7,"name":"Patio","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Patio sets",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/best_sellers/patio2.png","division":"bestsellers"
+    },
+
+    {
+        "productid":8,"name":"Patio","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Patio sets",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/best_sellers/patio3.png","division":"bestsellers"
+    },
+
+    {
+        "productid":9,"name":"Patio","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Armchairs",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/best_sellers/patio4.png","division":"bestsellers"
+    },
+
+    {
+        "productid":10,"name":"Respira","shortdesc":"Outdoor bar table and stool","price":500,"highprice":"","category":"Outdoor",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/new_arrival/respira.png","division":"newarrivals"
+    },
+
+    {
+        "productid":11,"name":"Muggo","shortdesc":"Confort Sofa","price":8000,"highprice":16000,"category":"Sofa",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/new_arrival/muggo.png","division":"newarrivals"
+    },
+
+    {
+        "productid":12,"name":"Potty","shortdesc":"Premium leather sofa","price":1200,"highprice":"","category":"Sofa",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/new_arrival/potty.png","division":"newarrivals"
+    },
+
+    {
+        "productid":13,"name":"Assgard Sofa","shortdesc":"Outdoor bar table and stool","price":25000,"highprice":"","category":"Sofa",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/new_arrival/assgardsofa.png","division":"newarrivals"
+    },
+
+    {
+        "productid":14,"name":"Patio","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Patio sets",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/new_arrival/patio5.png","division":"newarrivals"
+    },
+
+    {
+        "productid":15,"name":"Patio","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Patio sets",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/new_arrival/patio6.png","division":"newarrivals"
+    }
+
+    
+]

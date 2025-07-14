@@ -32,15 +32,21 @@
                 <img src="image/search_icon.png" alt="search icon">
                 <span>Search</span>
             </div>
-            <img src="image/cart_icon.png" alt="cart icon">
-            <img src="image/wishlist_icon.png" alt="wishlist icon">
-            <button class="signInorSignUpbtn" id="signInorSignUpbtn">Sign Up / Sign in</button>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='cartpage.html'">
+                <img src="image/cart_icon.png" alt="cart icon">
+                <span id="cartitemcount">(0)</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='wishlistpage.html'">
+                <img src="image/wishlist_icon.png" alt="wishlist icon">
+                <span id="wishitemcount">(0)</span>
+            </div>
+            <button class="signInorSignUpbtn" id="signInorSignUpbtn" onclick="signinSignout()"></button>
         </div>
     </header>
     <main>
         <div class="categorysection">
-            <h1>Popular Categories</h1>
-            <p>Organize your space, elevate your style</p>
+            <h1 style="text-align: start;">Popular Categories</h1>
+            <p style="text-align: start;">Organize your space, elevate your style</p>
             <div class="displaycategoryarea" id="displaycategoryarea">
                 
                 <!-- categories generated dynamically -->
@@ -56,6 +62,8 @@
     <script>
         updateloginstatus()
         displaycategories()
+        updatecartcount()
+        updatewishlistcount()
     </script>
 </body>
 </html>

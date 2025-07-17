@@ -53,15 +53,15 @@
                 <img src="image/search_icon.png" alt="search icon">
                 <span>Search</span>
             </div>
-            <div style="display: flex; font-size: 14px;" onclick="window.location.href='cartpage.html'">
+            <div style="display: flex; font-size: 14px;">
                 <img src="image/cart_icon.png" alt="cart icon">
                 <span id="cartitemcount">(0)</span>
             </div>
-            <div style="display: flex; font-size: 14px;" onclick="window.location.href='wishlistpage.html'">
+            <div style="display: flex; font-size: 14px;">
                 <img src="image/wishlist_icon.png" alt="wishlist icon">
                 <span id="wishitemcount">(0)</span>
             </div>
-            <button class="signInorSignUpbtn" id="signInorSignUpbtn" onclick="signinSignout()"></button>
+            <button class="signInorSignUpbtn">Sign In</button>
         </div>
     </header>
     <main>
@@ -221,7 +221,7 @@
             }
 
         });
-
+        
         updatecartcount()
         updatewishlistcount()
     </script>

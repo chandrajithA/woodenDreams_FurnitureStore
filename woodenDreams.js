@@ -104,7 +104,7 @@ async function displayproducts(category, element, division){
   element.innerHTML = ""
   let products = {}
     if(category === ""){
-      productlist = await getProductData();
+      let productlist = await getProductData();
       products = productlist.filter(product=> product.division === division)
     }else if(category){
       let productlist = await getProductData();
@@ -177,7 +177,7 @@ function createSingleProductElement(singleproduct) {
 
   const priceSpan = document.createElement('span');
   priceSpan.className = 'productprice';
-  priceSpan.textContent = `Rs ${singleproduct.price}`;
+  priceSpan.textContent = `Rs ${singleproduct.price.toFixed(2)}`;
 
   const highPriceSpan = document.createElement('span');
   highPriceSpan.className = 'producthighprice';
@@ -185,7 +185,7 @@ function createSingleProductElement(singleproduct) {
     highPriceSpan.textContent = "14000"
     highPriceSpan.style.visibility= "hidden";
   }else{
-    highPriceSpan.textContent = `Rs ${singleproduct.highprice}`;
+    highPriceSpan.textContent = `Rs ${singleproduct.highprice.toFixed(2)}`;
   }
   
 

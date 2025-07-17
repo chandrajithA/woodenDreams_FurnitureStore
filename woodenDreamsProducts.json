@@ -72,12 +72,6 @@
     },
 
     {
-        "productid":13,"name":"Assgard Sofa","shortdesc":"Outdoor bar table and stool","price":25000,"highprice":"","category":"Sofa",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/new_arrival/assgardsofa.png","division":"newarrivals"
-    },
-
-    {
         "productid":14,"name":"Patio","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Patio sets",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
         "imagepath":"image/new_arrival/patio5.png","division":"newarrivals"

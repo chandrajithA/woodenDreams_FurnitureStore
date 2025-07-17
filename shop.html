@@ -59,6 +59,27 @@
                 <span class="posterfirstword">Home</span><span style="font-size: 18px; font-weight: 500;"> > </span><span class="postersecondword"> Shop</span>
             </div>
         </div>
+        <div class="productsection">
+            <p style="text-align: start; color: #000000;letter-spacing: 1px;font-size: 24px;">Shop By Categories</p>
+            <h1>Best Sellers</h1>
+            <p>Our Most Loved Pieces</p>
+            <div class="displayproductarea" id="displayshopbestsellerproductarea">
+
+                <!-- products generated dynamically -->
+                
+                
+                
+            </div>
+        </div>
+        <div class="productsection">
+            <h1>New Arrivals</h1>
+            <p>Discover What's New</p>
+            <div class="displayproductarea" id="displayshopnewarrivalsproductarea">
+                
+                <!-- products generated dynamically -->
+                
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footerarea">
@@ -133,6 +154,8 @@
         updateloginstatus()
         updatecartcount()
         updatewishlistcount()
+        displayproducts("",displayshopbestsellerproductarea,"bestsellers")
+        displayproducts("",displayshopnewarrivalsproductarea,"newarrivals")
     </script>
 </body>
 </html>

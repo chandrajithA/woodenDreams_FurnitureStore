@@ -988,7 +988,7 @@
         }
 
         .displaysingleproduct .addtocartarea .addtocartbtn{
-            padding: 20px 40px;
+            padding: 20px 30px;
             font-size: 18px;
             font-weight: 600;
             color: #bd8400;
@@ -1059,7 +1059,7 @@
             }
 
             .displaysingleproduct .addtocartarea .addtocartbtn{
-                padding: 20px 40px;
+                padding: 20px 30px;
                 font-size: 16px;
                 
             }
@@ -1114,7 +1114,7 @@
             }
 
             .displaysingleproduct .addtocartarea .addtocartbtn{
-                padding: 20px 40px;
+                padding: 10px 10px;
                 font-size: 16px;
                 
             }
@@ -1182,12 +1182,6 @@
                 }
             }
 
-            .displaysingleproduct .addtocartarea .addtocartbtn{
-                padding: 150px 40px;
-                font-size: 16px;
-                
-            }
-
             .displaysingleproduct .addtocartarea .addtocartareafunctionbtn{
                 justify-content: space-between;
                 align-items: center;
@@ -1198,7 +1192,7 @@
             }
 
             .displaysingleproduct .addtocartarea .addtocartbtn{
-                padding: 10px 20px;
+                padding: 10px 10px;
                 font-size: 16px;
                 
             }

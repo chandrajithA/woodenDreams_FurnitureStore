@@ -12,19 +12,11 @@
     <style>
         header{
             opacity: 0.5;
-        }
-        body{
-            overflow-y: hidden;
-        }
-        main{
-            position: relative;
-            & img{
-                
-                opacity: 0.5;
-            }
+            cursor: not-allowed;
         }
         footer{
             opacity: 0.5;
+            cursor: not-allowed;
         }
         
         
@@ -33,22 +25,22 @@
 </head>
 <body>
     <header>
-        <div class="navbarShortIcon" id="navbarShortIcon">
+        <div class="navbarShortIcon" id="navbarShortIcon" style="cursor: not-allowed;">
             <img src="image/menu_icon.png" alt="menu icon">
         </div>
-        <div class="logoArea" id="logoArea">
+        <div class="logoArea" id="logoArea" style="cursor: not-allowed;">
             <img src="image/logo.png" alt="logo image">
             <span class="companyName">Wooden  Dreams</span>
         </div>
-        <nav class="headerNavbar" id="headerNavbar">
-            <a href="">Home</a>
-            <a href="">About Us</a>
-            <a href="">Categories</a>
-            <a href="">Shop</a>
-            <a href="">Blog</a>
-            <a href="">Contact</a>
+        <nav class="headerNavbar" id="headerNavbar" style="cursor: not-allowed;">
+            <a href="" style="cursor: not-allowed;">Home</a>
+            <a href="" style="cursor: not-allowed;">About Us</a>
+            <a href="" style="cursor: not-allowed;">Categories</a>
+            <a href="" style="cursor: not-allowed;">Shop</a>
+            <a href="" style="cursor: not-allowed;">Blog</a>
+            <a href="" style="cursor: not-allowed;">Contact</a>
         </nav>
-        <div class="headerFunctionArea">
+        <div class="headerFunctionArea" style="cursor: not-allowed;">
             <div class="searchArea">
                 <img src="image/search_icon.png" alt="search icon">
                 <span>Search</span>
@@ -61,14 +53,12 @@
                 <img src="image/wishlist_icon.png" alt="wishlist icon">
                 <span id="wishitemcount">(0)</span>
             </div>
-            <button class="signInorSignUpbtn">Sign In</button>
+            <button class="signInorSignUpbtn" style="cursor: not-allowed;">Sign In</button>
         </div>
     </header>
     <main>
         <div class="signinPageDisplayPoster">
-            <img src="image/homepage_poster1.png" alt="display image" class="indexPagePoster1">
-        </div>
-        <div class="loginpage" id="loginpage">
+                <div class="loginpage" id="loginpage">
             <div class="logincanceliconarea">
                 <img src="image/cancel_icon.png" alt="cancel icon" class="logincancelicon" onclick="previouspage()">
             </div>
@@ -81,10 +71,10 @@
                 </div>
                 <div class="loginformarea">
                     <h2 class="loginformheading">Log In</h2>
-                    <form action="" id="signinform">
+                    <form id="signinform" class="signinform">
                         <input type="text" id="useridarea" class="emailidarea" placeholder="Enter your Email Address">
                         <div class="error" id="usernameError"></div>
-                        <input type="password" id="userpasswordarea" class="passwordarea" placeholder="Enter Password">
+                        <input type="password" id="userpasswordarea" class="passwordarea" placeholder="Enter Password" autocomplete="off">
                         <div class="error" id="passwordError"></div>
                         <div class="remembermeAndSignupbtnarea">
                             <label for="rememberme" style="margin-left: 5px;"><input type="checkbox" id="rememberme"> Remember Me</label>
@@ -98,6 +88,8 @@
             </div>
             
         </div>
+        </div>
+        
     </main>
     <footer>
         <div class="footerarea">
@@ -122,21 +114,21 @@
             <div class="footer-section-links">
                 <h3>LINKS</h3>
                 <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="" style="cursor: not-allowed;">Home</a></li>
+                <li><a href="" style="cursor: not-allowed;">About</a></li>
+                <li><a href="" style="cursor: not-allowed;">Categories</a></li>
+                <li><a href="" style="cursor: not-allowed;">Shop</a></li>
+                <li><a href="" style="cursor: not-allowed;">Blog</a></li>
+                <li><a href="" style="cursor: not-allowed;">Contact</a></li>
                 </ul>
             </div>
 
             <div class="footer-section-help">
                 <h3>HELP</h3>
                 <ul>
-                <li><a href="#">Payment Options</a></li>
-                <li><a href="#">Returns</a></li>
-                <li><a href="#">Privacy Policies</a></li>
+                <li><a href="#" style="cursor: not-allowed;">Payment Options</a></li>
+                <li><a href="#" style="cursor: not-allowed;">Returns</a></li>
+                <li><a href="#" style="cursor: not-allowed;">Privacy Policies</a></li>
                 </ul>
             </div>
 
@@ -144,8 +136,8 @@
                 <div class="subscribe-section">
                     <h2>Subscribe</h2>
                     <div class="subscribe-form">
-                        <input type="email" placeholder="Enter your email" id="customeremail">
-                        <button>SIGN UP</button>
+                        <input type="email" placeholder="Enter your email" id="customeremail" style="cursor: not-allowed;">
+                        <button style="cursor: not-allowed;">SIGN UP</button>
                     </div>
                 </div>
                 <div class="follow-us">

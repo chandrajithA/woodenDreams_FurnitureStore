@@ -2,85 +2,127 @@
     {
         "productid":1,"name":"Syltherine","shortdesc":"Stylish cafe chair","price":2500,"highprice":3500,"category":"Chairs",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/best_sellers/syltherine.png","division":"bestsellers"
+        "imagepath":"image/best_sellers/syltherine.png","division":"bestsellers",
+        "productcolor":["lightgrey","white","black"],
+        "alternateimages":["image/best_sellers/syltherine.png","image/best_sellers/syltherine.png","image/best_sellers/syltherine.png"],
+        "productsize":["S","M","L"],"reviews":"⭐⭐⭐⭐☆ (123 reviews)","availablestock":5
     },
 
     {
         "productid":2,"name":"Lolito","shortdesc":"Luxury big Sofa","price":7000,"highprice":14000,"category":"Sofa",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/best_sellers/lolito.png","division":"bestsellers"
+        "imagepath":"image/best_sellers/lolito.png","division":"bestsellers",
+        "productcolor":["white","pink","lightgrey"],
+        "alternateimages":["image/best_sellers/lolito.png","image/best_sellers/lolito.png","image/best_sellers/lolito.png"],
+        "productsize":["S","M","L"],"reviews":"⭐⭐⭐⭐⭐ (43 reviews)","availablestock":5
     },
 
     {
         "productid":3,"name":"Pingky","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Sofa",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/best_sellers/pingky.png","division":"bestsellers"
+        "imagepath":"image/best_sellers/pingky.png","division":"bestsellers",
+        "productcolor":["white","pink","lightgrey","lightblue"],
+        "alternateimages":["image/best_sellers/pingky.png","image/best_sellers/pingky.png","image/best_sellers/pingky.png"],
+        "productsize":["S","M","L"],"reviews":"⭐⭐⭐⭐☆ (38 reviews)","availablestock":5
     },
 
     {
         "productid":4,"name":"Grifo","shortdesc":"Night lamp","price":1500,"highprice":"","category":"Decor",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/best_sellers/grifo.png","division":"bestsellers"
+        "imagepath":"image/best_sellers/grifo.png","division":"bestsellers",
+        "productcolor":["lightgrey","white","black"],
+        "alternateimages":["image/best_sellers/grifo.png","image/best_sellers/grifo.png","image/best_sellers/grifo.png"],
+        "productsize":["S","M","L"],"reviews":"⭐⭐⭐⭐⭐ (212 reviews)","availablestock":5
     },
 
     {
         "productid":5,"name":"Leviosa","shortdesc":"Stylish cafe chair","price":2500,"highprice":"","category":"Chairs",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/best_sellers/leviosa.png","division":"bestsellers"
+        "imagepath":"image/best_sellers/leviosa.png","division":"bestsellers",
+        "productcolor":["white","pink","lightgrey","lightblue"],
+        "alternateimages":["image/best_sellers/leviosa.png","image/best_sellers/leviosa.png","image/best_sellers/leviosa.png"],
+        "productsize":["S","M","L"],"reviews":"⭐⭐⭐☆☆ (250 reviews)","availablestock":5
     },
 
     {
         "productid":6,"name":"Patio","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Chairs",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/best_sellers/patio1.png","division":"bestsellers"
+        "imagepath":"image/best_sellers/patio1.png","division":"bestsellers",
+        "productcolor":["white","black","lightgrey"],
+        "alternateimages":["image/best_sellers/patio1.png","image/best_sellers/patio1.png","image/best_sellers/patio1.png"],
+        "productsize":["S","M","L"],"reviews":"⭐⭐⭐⭐⭐ (198 reviews)","availablestock":5
     },
 
     {
         "productid":7,"name":"Patio","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Patio sets",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/best_sellers/patio2.png","division":"bestsellers"
+        "imagepath":"image/best_sellers/patio2.png","division":"bestsellers",
+        "productcolor":["white","pink","lightgrey","lightblue"],
+        "alternateimages":["image/best_sellers/patio2.png","image/best_sellers/patio2.png","image/best_sellers/patio2.png"],
+        "productsize":["S","M","L"],"reviews":"⭐⭐⭐⭐☆ (157 reviews)","availablestock":5
     },
 
     {
         "productid":8,"name":"Patio","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Patio sets",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/best_sellers/patio3.png","division":"bestsellers"
+        "imagepath":"image/best_sellers/patio3.png","division":"bestsellers",
+        "productcolor":["white","yellow","lightgrey","pink"],
+        "alternateimages":["image/best_sellers/patio3.png","image/best_sellers/patio3.png","image/best_sellers/patio3.png"],
+        "productsize":["S","M","L"],"reviews":"⭐⭐⭐⭐⭐ (178 reviews)","availablestock":5
     },
 
     {
         "productid":9,"name":"Patio","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Armchairs",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/best_sellers/patio4.png","division":"bestsellers"
+        "imagepath":"image/best_sellers/patio4.png","division":"bestsellers",
+        "productcolor":["white","brown","lightgrey","black"],
+        "alternateimages":["image/best_sellers/patio4.png","image/best_sellers/patio4.png","image/best_sellers/patio4.png"],
+        "productsize":["S","M","L"],"reviews":"⭐⭐⭐⭐⭐ (58 reviews)","availablestock":5
     },
 
     {
         "productid":10,"name":"Respira","shortdesc":"Outdoor bar table and stool","price":500,"highprice":"","category":"Outdoor",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/new_arrival/respira.png","division":"newarrivals"
+        "imagepath":"image/new_arrival/respira.png","division":"newarrivals",
+        "productcolor":["white","grey","lightgrey"],
+        "alternateimages":["image/new_arrival/respira.png","image/new_arrival/respira.png","image/new_arrival/respira.png"],
+        "productsize":["S","M","L"],"reviews":"⭐⭐⭐⭐⭐ (96 reviews)","availablestock":5
     },
 
     {
         "productid":11,"name":"Muggo","shortdesc":"Confort Sofa","price":8000,"highprice":16000,"category":"Sofa",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/new_arrival/muggo.png","division":"newarrivals"
+        "imagepath":"image/new_arrival/muggo.png","division":"newarrivals",
+        "productcolor":["white","grey","lightgrey","black"],
+        "alternateimages":["image/new_arrival/muggo.png","image/new_arrival/muggo.png","image/new_arrival/muggo.png"],
+        "productsize":["S","M","L"],"reviews":"⭐⭐⭐⭐⭐ (76 reviews)","availablestock":5
     },
 
     {
         "productid":12,"name":"Potty","shortdesc":"Premium leather sofa","price":1200,"highprice":"","category":"Sofa",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/new_arrival/potty.png","division":"newarrivals"
+        "imagepath":"image/new_arrival/potty.png","division":"newarrivals",
+        "productcolor":["white","brown","lightgrey"],
+        "alternateimages":["image/new_arrival/potty.png","image/new_arrival/potty.png","image/new_arrival/potty.png"],
+        "productsize":["S","M","L"],"reviews":"⭐⭐⭐⭐☆ (69 reviews)","availablestock":5
+    },
+
+    {
+        "productid":13,"name":"Patio","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Patio sets",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
+        "imagepath":"image/new_arrival/patio5.png","division":"newarrivals",
+        "productcolor":["brown","lightgrey","white"],
+        "alternateimages":["image/new_arrival/patio5.png","image/new_arrival/patio5.png","image/new_arrival/patio5.png"],
+        "productsize":["S","M","L"],"reviews":"⭐⭐⭐⭐⭐ (59 reviews)","availablestock":5
     },
 
     {
         "productid":14,"name":"Patio","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Patio sets",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/new_arrival/patio5.png","division":"newarrivals"
-    },
-
-    {
-        "productid":15,"name":"Patio","shortdesc":"Cute bed set","price":7000,"highprice":14000,"category":"Patio sets",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt, modi reiciendis minus explicabo qui vero quia architecto fugiat? Sunt eaque similique autem sequi quidem in fugiat temporibus voluptate ipsa.",
-        "imagepath":"image/new_arrival/patio6.png","division":"newarrivals"
+        "imagepath":"image/new_arrival/patio6.png","division":"newarrivals",
+        "productcolor":["brown","white","lightgrey"],
+        "alternateimages":["image/new_arrival/patio6.png","image/new_arrival/patio6.png","image/new_arrival/patio6.png"],
+        "productsize":["S","M","L"],"reviews":"⭐⭐⭐⭐⭐ (41 reviews)","availablestock":5
     }
 
     

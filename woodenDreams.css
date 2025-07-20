@@ -313,22 +313,23 @@
 
 /* login page main content */
 
-    .signinPageDisplayPoster .indexPagePoster1{
-        height:calc(100vh - 110px);
+    .signinPageDisplayPoster {
+        background-image: url(image/homepage_poster1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 30px 0;
+        
     }
 
 
     .loginpage{
         width: 80vw;
         height: auto;
-        position: absolute;
-        top: 300px;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        margin: 0 auto;
         background-color:#FFF3E3;
         border: 2px solid black;
         border-radius: 20px;
-        opacity: 1;
+        
         
     }
 
@@ -344,7 +345,7 @@
         right: 10px;
         width: 40px;    
         display: block;
-        opacity: 1;
+        
     }
     .logingrid{
         display: grid;
@@ -386,12 +387,13 @@
         
     }
 
+    
 
     .loginformheading{
         margin-top: 7%;
         font-weight: 600;
         color: grey;
-        font-size: 2vw;
+        font-size: 24px;
     }
 
     .emailidarea{
@@ -424,10 +426,14 @@
         outline: none;             
     }
 
+    input:-webkit-autofill {
+       -webkit-box-shadow: 0 0 0 1000px #B88E2F inset !important;
+        -webkit-text-fill-color: #fff !important; 
+        transition: background-color 1000s ease-in-out 0s; 
+    }
+
     input::placeholder {
         color: #FFFFFF;
-        opacity: 1;
-        
     }
 
     input:focus::placeholder {
@@ -435,8 +441,8 @@
     }
 
     .remembermeAndSignupbtnarea{
-        margin-top: 3vh;
-        margin-bottom: 3vh;
+        margin-top: 20px;
+        margin-bottom: 20px;
         display: flex; 
         justify-content: space-between;
         width: 100%;
@@ -460,11 +466,13 @@
         margin-left: 25%;
     }
 
-    @media screen and (max-width:1023.98px) {
-        .loginpage{    
-            top: 260px;  
+    @media screen and (max-width:1023.98px){
+        .emailidarea{
+            width: 100%;
         }
-        
+        .passwordarea{
+            width: 100%;
+        }
     }
 
     @media screen and (max-width:767.98px) {
@@ -472,8 +480,13 @@
             width: 30px;
         }
         .loginpage{
-            width: auto;
+            width: 60vw;
             min-width: 300px;
+        }
+        .signinform{
+            padding-left: 0 ;
+            padding-right: 0;
+            padding-top: 10px;
         }
         .logingrid{
             display: grid;
@@ -484,20 +497,23 @@
             display: none;
         }
         .loginformheading{
-            margin-top: 4vh;
             text-align: center;
-            font-size: 16px;
+            font-size: 24px;
         }
 
         .emailidarea{
             width: 100%;
-            margin-top: 3vh;
+            margin-top: 30px;
             
         }
 
         .passwordarea{
             width: 100%;
-            margin-top: 3vh;
+            
+        }
+
+        .remembermeAndSignupbtnarea{
+            justify-content: space-evenly;
         }
 
         input::placeholder {
@@ -516,54 +532,23 @@
     }
 
 
-    @media screen and (max-height:1439.98px) {
-        .loginpage{    
-            top: 350px;  
-        }
-        .signinPageDisplayPoster .indexPagePoster1{
-            height:calc(100vh - 110px);
-        }
-        
-    }
 
-    @media screen and (max-height:1023.98px) {
-        .loginpage{    
-            top: 320px;  
-        }
-        .signinPageDisplayPoster .indexPagePoster1{
-            height:calc(100vh - 110px);
-        }
-        
-        
-    }
-
-    @media screen and (max-height:767.98px) {
-        .loginpage{    
-            top: 220px;  
-        }
-        .signinPageDisplayPoster .indexPagePoster1{
-            height:calc(100vh - 110px);
-        }
-        
-        
-    }
+    
 
 
     /* sign up page main content */
 
-        .signupPageDisplayPoster .indexPagePoster1{
-            height:calc(110vh - 120px);
+        .signupPageDisplayPoster{
+            background-image: url(image/homepage_poster1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 30px 0;
         }
 
-        
-
         .signuppage{
-            width: 50vw;
+            width: 70vw;
             height: auto;
-            position: absolute;
-            top: 350px;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            margin: 0 auto;
             background-color:#FFF3E3;
             border: 2px solid black;
             border-radius: 20px;
@@ -622,22 +607,22 @@
             font-size: 16px;
         }
 
-        @media screen and (max-width:1439.98px) {
-            .signuppage{    
-                top: 350px;  
+        @media screen and (max-width:1440.98px) {
+            .signuppage{
+                width: 60vw;
             }
         }
 
-        @media screen and (max-width:1023.98px) {
-            .signuppage{    
-                top: 370px;  
-            }
+        @media screen and (max-width:1024.98px) {
             .signuppage form {
                 padding: 20px 0; 
             }
         }
 
-         @media screen and (max-width:767.98px) {
+         @media screen and (max-width:768.98px) {
+            .signuppage{
+                width: 80vw;
+            }
             .signuparea{
 
                 & p{
@@ -646,12 +631,7 @@
             }
         }
 
-        @media screen and (min-height:1024px) {
-            
-            .signuppage{
-                width: 50vh;
-            }
-        }
+        
 
 
         /*   category section  */
@@ -996,7 +976,7 @@
         }
 
         .displaysingleproduct .addtocartarea .addtocartbtn{
-            padding: 20px 70px;
+            padding: 20px 40px;
             font-size: 18px;
             font-weight: 600;
             color: #bd8400;

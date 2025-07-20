@@ -84,7 +84,7 @@ async function displaycategories(){
   categories.forEach(singlecategory => {
       displaycategoryarea.innerHTML += 
       `
-      <div class="displaysinglecategory" id="${singlecategory.category}">
+      <div class="displaysinglecategory" id="${singlecategory.category}" onclick="selectcategory('${singlecategory.category}')">
           <div class="categoryimage">
               <img src="${singlecategory.imagepath}" alt="${singlecategory.category} image">
           </div>
@@ -97,6 +97,12 @@ async function displaycategories(){
 }
 
 
+function selectcategory(singlecategory){
+  sessionStorage.setItem("wdcategoryavailable",singlecategory);
+  window.location.href="shop.html"
+  
+}
+
 
 
 async function displayproducts(category, element, division){
@@ -108,14 +114,20 @@ async function displayproducts(category, element, division){
       products = productlist.filter(product=> product.division === division)
     }else if(category){
       let productlist = await getProductData();
-      products = productlist.filter(product=> product.category === category || product.division === division)
+      products = productlist.filter(product=> product.category === category && product.division === division)
     }
-    
-    products.forEach(singleproduct => {
+
+    if(products.length === 0){
+      element.innerHTML = `<p></p><p style="color:red">Currently no item is available under ${category} category</p>`
+    }
+    else{
+      products.forEach(singleproduct => {
         const productElement = createSingleProductElement(singleproduct);
         element.appendChild(productElement);
-        
     });
+    }
+    
+    
 }
 
 
@@ -415,14 +427,14 @@ function removefromcart(item,signinuser){
             }
         })
 
-      // let cartItems = JSON.parse(localStorage.getItem("wdcartitems"));
-      //     cartItems.forEach((items,index)=>{
-      //       if(items.loginuserid === item.loginuserid && items.productid === item.productid){
-      //         cartItems.splice(index,1);
-      //         localStorage.setItem("wdcartitems",JSON.stringify(cartItems));
-      //       }
-              
-      //     })
+}
+
+function removeallcartlistofuser(signinuser){
+  let productsincartlist = JSON.parse(localStorage.getItem("wdcartitems"));
+        let updatedcartlist = productsincartlist.filter(item => item.loginuserid !== signinuser);
+        localStorage.setItem("wdcartitems",JSON.stringify(updatedcartlist));
+        updatecartcount();
+    
 }
 
 
@@ -939,7 +951,7 @@ function singleproductdetailsinfo(product){
 
     if(wishItems.length === 0){
         wishItemsDisplayArea.innerHTML = `
-        <p>Your Wishlist is empty</p>
+        <p style="padding: 30px 0px">Your Wishlist is empty</p>
         `;
         wishclearBtn.style.display = "none";
     }
@@ -989,12 +1001,10 @@ function singleproductdetailsinfo(product){
     const clearBtn = document.createElement("button");
     clearBtn.className = "clearcartbtn";
     clearBtn.textContent = "Clear Cart";
-    // clearBtn.onclick = () =>{
-    //     localStorage.removeItem("cartitems");
-    //     totalbill = 0;
-    //     totalwithoutdiscount = 0
-    //     window.location.reload();
-    // };
+    clearBtn.onclick = () =>{
+        removeallcartlistofuser(signinuser)
+        window.location.reload();
+    };
 
     cartHeadingArea.appendChild(titleContainer);
     cartHeadingArea.appendChild(clearBtn);
@@ -1064,7 +1074,7 @@ function singleproductdetailsinfo(product){
     decBtn.className = "cartitemcountdecbtn";
     decBtn.id = `cartitem${index}countdecbtn`;
     decBtn.textContent = "-";
-    // decBtn.onclick = () => decreaseitemcount(index);
+    decBtn.onclick = () => decreaseitemcount();
 
     const countText = document.createElement("div");
     countText.className = "cartitemcounttext";
@@ -1075,7 +1085,7 @@ function singleproductdetailsinfo(product){
     incBtn.className = "cartitemcountincbtn";
     incBtn.id = `cartitem${index}countincbtn`;
     incBtn.textContent = "+";
-    // incBtn.onclick = () => increaseitemcount(index);
+    incBtn.onclick = () => increaseitemcount();
 
     countArea.appendChild(decBtn);
     countArea.appendChild(countText);
@@ -1095,13 +1105,10 @@ function singleproductdetailsinfo(product){
     const removeBtn = document.createElement("button");
     removeBtn.className = "removeitembtn";
     removeBtn.textContent = "Remove Item";
-    // removeBtn.onclick = () => {
-    //     totalbill -= finalpricewithquantity;
-    //     totalwithoutdiscount -= item.price;
-    //     removeitemfromcart(index);
-        
-    //     window.location.reload();
-    // };
+    removeBtn.onclick = () => {
+        removefromcart(item,signinuser);
+        window.location.reload()
+    };
 
     finalDiv.appendChild(finalPriceSpan);
     finalDiv.appendChild(removeBtn);
@@ -1113,6 +1120,77 @@ function singleproductdetailsinfo(product){
     itemWrapper.appendChild(finalDiv);
     cartItemsDisplayArea.appendChild(itemWrapper);
         totalbill  += finalpricewithquantity;
+
+        function updatecartdetailswhencountchange(){
+          let cartItemslist = JSON.parse(localStorage.getItem("wdcartitems"));
+          let matcheditem = cartItemslist.find(cartitem => cartitem.loginuserid === signinuser && cartitem.productid === item.productid)
+
+          if(matcheditem){
+            countText.textContent = matcheditem.purchasecount;
+            finalpricewithquantity = (matcheditem.price * matcheditem.purchasecount);
+            finalPriceSpan.textContent = `₹ ${finalpricewithquantity.toFixed(2)}`;
+
+            let totalbillvalue = 0;
+            let totalcartcount = 0;
+            let cartitemslist = cartItemslist.filter(cartitem => cartitem.loginuserid === signinuser)
+            cartitemslist.forEach(cartitems=>{
+              totalbillvalue += cartitems.price * cartitems.purchasecount;
+              totalcartcount += cartitems.purchasecount;
+            })
+            totalFinal.innerText = `₹ ${totalbillvalue.toFixed(2)}`;
+            itemCount.innerText=`(${totalcartcount})`;
+            totalCount.innerText = `${totalcartcount} items`
+          }
+          
+        }
+
+        
+        function increaseitemcount(){
+          let cartItemslist = JSON.parse(localStorage.getItem("wdcartitems"));
+          let cartitem = cartItemslist.find(cartitem => cartitem.loginuserid === signinuser && cartitem.productid === item.productid) 
+          
+                if(cartitem.purchasecount < item.availablestock){
+                    cartitem.purchasecount = cartitem.purchasecount + 1;
+                    localStorage.setItem("wdcartitems",JSON.stringify(cartItemslist));
+                    updatecartdetailswhencountchange();
+                    updatecartcount();
+                }else{
+                    alert(`"${item.name}" has only ${item.availablestock} stock.`);
+                }
+                 
+        }
+
+        function decreaseitemcount(){
+          let cartItemslist = JSON.parse(localStorage.getItem("wdcartitems"));
+          let cartitem = cartItemslist.find(cartitem => cartitem.loginuserid === signinuser && cartitem.productid === item.productid) 
+         
+              
+                if(cartitem.purchasecount === 1){
+                  removeitemfromcartwhenpurchasezero(cartitem);
+                  window.location.reload();
+                }
+                else{
+                  cartitem.purchasecount = cartitem.purchasecount - 1;
+                  localStorage.setItem("wdcartitems",JSON.stringify(cartItemslist));
+                  updatecartdetailswhencountchange();
+                  updatecartcount()
+                }   
+        }
+
+
+        function removeitemfromcartwhenpurchasezero(item){
+          let cartItems = JSON.parse(localStorage.getItem("wdcartitems"));
+          cartItems.forEach((items,index)=>{
+            if(items.loginuserid === item.loginuserid && items.productid === item.productid){
+              cartItems.splice(index,1);
+              localStorage.setItem("wdcartitems",JSON.stringify(cartItems));
+            }
+              
+          })
+            
+        }
+
+
     });
 
     // 3. Cart Total Display Area with summary
@@ -1154,11 +1232,7 @@ function singleproductdetailsinfo(product){
     totalCount.className = "carttotalitemcount";
     totalCount.id = "carttotalitemcount";
     totalCount.innerText = `${totalcartcount} items`
-
    
-    
-
-    
 
     detail2.appendChild(totalCount);
    
@@ -1168,14 +1242,14 @@ function singleproductdetailsinfo(product){
     checkoutBtn.id = "checkoutbtn";
     checkoutBtn.textContent = "Check Out";
     checkoutBtn.style.cursor = "pointer";
-    // checkoutBtn.onclick = ()=>{
-    //     let isloginstatus = sessionStorage.getItem("islogin") || "";
-    //     if(isloginstatus === "login"){
-    //         window.location.href = "shippingaddress.html";
-    //     }else{
-    //         window.location.href = "login.html";
-    //     }
-    // }
+    checkoutBtn.onclick = ()=>{
+        let isloginstatus = sessionStorage.getItem("wdissignin") || "";
+        if(isloginstatus === "signin"){
+            window.location.href = "checkoutpage.html";
+        }else{
+            window.location.href = "signin.html";
+        }
+    }
 
     cartTotalDetails.appendChild(detail1);
     cartTotalDetails.appendChild(detail2);
@@ -1190,15 +1264,19 @@ function singleproductdetailsinfo(product){
     cartDisplayArea.appendChild(cartItemsDisplayArea);
     cartDisplayArea.appendChild(cartTotalDisplayArea);
 
+    
+
     if(cartItems.length === 0){
         cartItemsDisplayArea.innerHTML = `
-        <p>Your cart is empty</p>
+        <p style="padding: 30px 0px">Your cart is empty</p>
         `;
         cartTotalDetails.style.display = "none";
         continueShoppingArea.style.margin = "auto";
         clearBtn.style.display = "none";
     }
     return cartDisplayArea;
+
+    
 }
 
 

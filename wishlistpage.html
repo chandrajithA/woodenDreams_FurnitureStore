@@ -134,7 +134,6 @@
                 overflow: hidden;
                 background-color: #B88E2F;
                 color: #FFFFFF;
-                margin-left: 30px;
                 cursor: pointer;
             }
         }
@@ -161,6 +160,74 @@
             font-size: small;
             text-decoration: none;
         }
+
+        @media screen and (max-width: 768.98px) {
+  .washlistdisplayarea {
+    padding: 30px 10px 20px 10px;
+    font-size: 16px;
+  }
+
+  .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay > div {
+    width: 100% !important;
+  }
+
+  .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitemimage {
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  .washlistdisplayarea .carttotaldisplayarea {
+    justify-content: center;
+  }
+
+  .washlistdisplayarea .carttotaldisplayarea .continueshoppingbtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 425.98px) {
+  .washlistdisplayarea .cartheadingarea {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .washlistdisplayarea .cartheadingarea .clearcartbtn {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitemfinalprice {
+    align-items: center;
+    text-align: center;
+  }
+
+  .washlistdisplayarea .carttotaldisplayarea {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .washlistdisplayarea .carttotaldisplayarea .continueshoppingbtn {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .washlistdisplayarea .cartitemsdisplayarea img {
+    width: 100%;
+    max-width: 250px;
+  }
+}
     </style>
 </head>
 <body>
@@ -275,11 +342,21 @@
     </footer>
     <script src="woodenDreams.js"></script>
     <script>
+        
         document.addEventListener("DOMContentLoaded", () => {
             const container = document.getElementById("mainwishlistcontainer");
             container.innerHTML = ""; 
             container.appendChild(createwishLayout());
         });
+
+        window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            // The page was restored from the cache (like going back)
+            window.location.reload(); // force reload so your logic runs again
+        }
+        });
+
+
         updateloginstatus()
         updatecartcount()
         updatewishlistcount()

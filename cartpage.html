@@ -10,8 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Wooden Dreams</title>
     <style>
+
+        
         .cartdisplayarea{
-            
+            width: 90vw;
             max-width: 1200px ;
             min-width: 300px;
             margin: 0px auto;
@@ -81,7 +83,7 @@
             padding: 5px;
             display: flex;
             flex-direction: column;
-            flex-grow: 3;
+            flex-grow: 2;
             gap: 5px;
             width: 450px;
             & .cartitemname{
@@ -102,7 +104,7 @@
             flex-direction: column;
             flex-grow: 1;
             gap: 5px;
-            width: 100px;
+            width: 150px;
             
             & .cartitemhighprice{
                 color: rgb(155, 155, 155);
@@ -120,7 +122,7 @@
             display: flex;
             flex-grow: 1;
             gap: 5px;
-            width: 150px;
+            width: 140px;
 
             & .cartitemcountdecbtn, .cartitemcountincbtn{
                 border: 0.5px solid rgba(0,0,0,0.3);
@@ -161,8 +163,8 @@
                 overflow: hidden;
                 background-color: #B88E2F;
                 color: #FFFFFF;
-                margin-left: 30px;
                 cursor: pointer;
+                min-width: 100px;
             }
         }
 
@@ -189,6 +191,7 @@
             display: inline-block;
             font-size: small;
             text-decoration: none;
+            
         }
 
         .cartdisplayarea .carttotaldisplayarea .carttotaldetails{
@@ -200,6 +203,7 @@
             min-width: 400px;
             
             
+            
 
         }
         .cartdisplayarea .carttotaldisplayarea .carttotaldetails .carttotaldetail1{
@@ -207,10 +211,10 @@
             justify-content: space-between;
             padding: 5px;
             & .carttotalname{
-                font-weight: 700;
+                font-weight: 600;
             }
             & .carttotalfinalpice{
-                font-weight: 700;
+                font-weight: 600;
             }
         }
 
@@ -235,6 +239,94 @@
             border: none;
             margin-top: 10px;
         }
+
+
+
+
+
+        @media screen and (max-width: 768.98px) {
+    .cartdisplayarea {
+        padding: 30px 10px 20px 10px;
+        font-size: 16px;
+    }
+
+    .cartdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cartdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay > div {
+        width: 100% !important;
+    }
+
+    .cartdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitemimage {
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    .cartdisplayarea .carttotaldisplayarea {
+        flex-direction: column-reverse; 
+        align-items: center;
+        gap: 20px;
+    }
+
+    .cartdisplayarea .carttotaldisplayarea .carttotaldetails {
+        width: 100%;
+        min-width: unset;
+    }
+
+    
+
+    .cartdisplayarea .carttotaldisplayarea .continueshoppingbtn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cartdisplayarea .carttotaldisplayarea .carttotaldetails .checkoutbtn {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 425.98px) {
+    .cartheadingarea {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+    }
+
+    .cartheadingarea .clearcartbtn {
+        margin: 15px 0 0 0;
+    }
+
+    .cartdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .cartdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitemcountarea {
+        justify-content: center;
+    }
+
+    .cartdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitemfinalprice {
+        align-items: start;
+        text-align: start;
+        
+    }
+
+    .cartdisplayarea .carttotaldisplayarea .continueshoppingbtn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cartdisplayarea .carttotaldisplayarea .carttotaldetails .checkoutbtn {
+        width: 100%;
+    }
+}
+
+
+
+        
 
     </style>
 </head>
@@ -355,6 +447,13 @@
             const container = document.getElementById("maincartcontainer");
             container.innerHTML = ""; 
             container.appendChild(createCartLayout());
+        });
+
+        window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            // The page was restored from the cache (like going back)
+            window.location.reload(); // force reload so your logic runs again
+        }
         });
 
         updateloginstatus()

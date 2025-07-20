@@ -9,6 +9,143 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Wooden Dreams</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fefefe;
+  color: #333;
+  line-height: 1.6;
+}
+
+.blog-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 50px;
+}
+
+/* Featured Blog Post */
+.featured-blog {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.featured-image {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featured-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.featured-content h2 {
+  font-size: 26px;
+  color: #B88E2F;
+  margin-bottom: 15px;
+}
+
+.featured-content p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #B88E2F;
+  font-weight: 600;
+}
+
+/* Blog Cards Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.blog-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.blog-card h3 {
+  color: #222;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.blog-card p {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.blog-card a {
+  color: #B88E2F;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .featured-blog {
+    flex-direction: column;
+  }
+
+  .featured-content h2 {
+    font-size: 22px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+    </style>
 </head>
 <body>
     <header>
@@ -50,6 +187,57 @@
                 <div><span class="posterfirstword">Home</span><span style="font-size: 18px; font-weight: 500;"> > </span><span class="postersecondword"> Blog</span></div>
             </div>
         </div>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Blog | Wooden Dreams</title>
+</head>
+<body>
+  <section class="blog-section">
+    <div class="container">
+      <h1 class="section-title">From Our Blog</h1>
+      <p class="section-subtitle">Insights, tips, and trends from the world of fine furniture</p>
+
+      <!-- Featured Blog Post -->
+      <div class="featured-blog">
+        <img src="image/new_arrival/respira.png" alt="Featured Blog" class="featured-image">
+        <div class="featured-content">
+          <h2>How to Choose the Perfect Sofa for Your Living Room</h2>
+          <p>Explore practical tips and design inspiration for selecting a sofa that suits your space, budget, and lifestyle.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="blog-grid">
+        <div class="blog-card">
+          <img src="image/woodentable.png" alt="Wooden Table">
+          <h3>Top 5 Wooden Dining Tables for Every Home</h3>
+          <p>Discover our expert picks for durable, stylish dining tables crafted from solid wood.</p>
+          <a href="#">Read More</a>
+        </div>
+
+        <div class="blog-card">
+          <img src="image/testimony2.png" alt="Bedroom Design">
+          <h3>Minimalist Bedroom Setup Ideas</h3>
+          <p>Learn how to create a calming and clutter-free bedroom using minimalist furniture pieces.</p>
+          <a href="#">Read More</a>
+        </div>
+
+        <div class="blog-card">
+          <img src="image/category/outdoor.png" alt="Furniture Care">
+          <h3>Furniture Maintenance: Dos and Don'ts</h3>
+          <p>Keep your wooden furniture looking new with our simple care tips and tricks.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
     </main>
     <footer>
         <div class="footerarea">
@@ -122,6 +310,14 @@
 
     <script src="woodenDreams.js"></script>
     <script>
+
+      window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            // The page was restored from the cache (like going back)
+            window.location.reload(); // force reload so your logic runs again
+        }
+        });
+        
         updateloginstatus()
         updatecartcount()
         updatewishlistcount()

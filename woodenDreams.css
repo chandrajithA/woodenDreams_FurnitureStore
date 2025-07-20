@@ -89,6 +89,7 @@
             display: inline-flex;
             flex-direction: column;
             justify-content: center;
+            visibility: hidden;
             & span{
                 font-size: 10px;
                 font-weight: 500;
@@ -164,7 +165,7 @@
 
     @media screen and (max-width:768.98px){
         header{
-            gap: 10px;
+            gap: 6px;
             justify-content: space-between;
         }
 
@@ -215,6 +216,7 @@
             display: block;
             order: 1;
             cursor: pointer;
+            gap: 0;
         }
 
         .headerFunctionArea{

@@ -110,6 +110,10 @@
                 text-align: center;
                 padding: 5px;
                 margin: 0 5px;
+                &:focus{
+                    background-color: #FFFFFF;
+                    color: #000000;
+                }
             }
 
             .buttons {
@@ -168,6 +172,7 @@
                 line-height: 1.7;
                 color: #555;
                 margin-bottom: 15px;
+                width: 100%;
             }
 
             @media(max-width: 768px) {
@@ -197,6 +202,63 @@
                     flex-direction: row;
                     justify-content: center;
                 }
+            }
+
+            table {
+                border-collapse: collapse;
+                margin-top: 0px;
+            }
+
+            table td {
+                padding: 10px 10px;
+                vertical-align: top;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .review-container {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                max-width: 1200px;
+                margin: 0px auto;
+                padding: 20px;
+                
+            }
+
+            .review {
+                background-color: #f9f9f9;
+                border-left: 4px solid #B88E2F;
+                padding: 16px 20px;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            }
+
+            .review h4 {
+                margin: 0 0 5px;
+                font-size: 16px;
+                color: #333;
+            }
+
+            .review strong {
+                font-size: 17px;
+                color: #111;
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            .review p {
+                margin: 0 0 10px;
+                color: #555;
+                line-height: 1.5;
+            }
+
+            .review small {
+                color: #999;
+                font-size: 13px;
+            }
+
+            .descriptioninforpara{
+                padding-top: 15px;
             }
     </style>
 </head>
@@ -381,35 +443,8 @@
         
         
 
-        // ----- Tabs -----
-        // const tabsContainer = document.createElement("div");
-        // tabsContainer.className = "tabs container";
-
-        // const tabButtons = document.createElement("div");
-        // tabButtons.className = "tab-buttons";
-
-        // const contentDiv = document.createElement("div");
-        // contentDiv.className = "tab-content";
-        // contentDiv.innerHTML = `<p>${product.tabs.description}</p>`;
-
-        // Object.keys(product.tabs).forEach(key => {
-        //     const btn = document.createElement("button");
-        //     btn.className = key;
-        //     btn.textContent = key.replace(/([a-z])([A-Z])/g, "$1 $2").replace(/^\w/, c => c.toUpperCase());
-        //     btn.addEventListener("click", () => {
-        //         contentDiv.innerHTML = `<p>${product.tabs[key]}</p>`;
-        //         [...tabButtons.children].forEach(b => b.classList.remove("active"));
-        //         btn.classList.add("active");
-        //     });
-        //     tabButtons.appendChild(btn);
-        // });
-
-        // tabsContainer.appendChild(tabButtons);
-        // tabsContainer.appendChild(contentDiv);
-
-        // const app = document.getElementById("app");
-        // app.appendChild(container);
-        // app.appendChild(tabsContainer);
+        
+        
 
 
         updateloginstatus()

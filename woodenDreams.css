@@ -429,7 +429,7 @@
     input:-webkit-autofill {
        -webkit-box-shadow: 0 0 0 1000px #B88E2F inset !important;
         -webkit-text-fill-color: #fff !important; 
-        transition: background-color 1000s ease-in-out 0s; 
+        /* transition: background-color 1s ease-in-out;  */
     }
 
     input::placeholder {
@@ -930,6 +930,11 @@
             font-size: 24px;
             font-weight: 600;
             padding: 15px 10px 0px 10px;
+            white-space: nowrap;        
+            overflow: hidden;           
+            text-overflow: ellipsis;
+            display: block;
+            max-width: 100%;
         }
 
         .productdetails .productdesc{
@@ -937,6 +942,11 @@
             font-weight: 500;
             color: gray;
             padding: 0 10px 10px 10px;
+            white-space: nowrap;        
+            overflow: hidden;           
+            text-overflow: ellipsis;
+            display: block;
+            max-width: 100%;
         }
 
         .productdetails .productpricearea{
@@ -1456,6 +1466,7 @@
                 }
                 &:focus{
                     background-color: #FFFFFF;  
+                    color: #000000;
                 }
                 &:focus::placeholder{
                     color: transparent;

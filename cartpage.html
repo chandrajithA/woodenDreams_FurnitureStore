@@ -10,6 +10,231 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Wooden Dreams</title>
     <style>
+        .cartdisplayarea{
+            
+            max-width: 1200px ;
+            min-width: 300px;
+            margin: 0px auto;
+            padding: 50px 15px 30px 15px;
+            font-size: 17px;
+            cursor: default;
+            & hr{
+                margin: 20px 5px;
+            }
+        }
+
+        .cartdisplayarea .cartheadingarea{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+        .cartheadingarea .carttitle{
+            font: 16px;
+            font-weight: 600;
+
+        }
+
+        .cartheadingarea .cartitemcountdisplay{
+            font-size: medium;
+            margin-left: 5px;
+            color: rgb(155, 155, 155);
+        }
+
+        .cartheadingarea .clearcartbtn{
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            overflow: hidden;
+            background-color: #B88E2F;
+            color: #FFFFFF;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+
+        .cartitemsdisplayarea {
+            & img{
+                width: 300px;
+                display: block;
+                margin: auto;
+            }
+            & p{
+                text-align: center;
+            }
+            
+        }
+
+        .cartdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay{
+            display: flex;
+            border: 1px solid rgba(0,0,0,0.3);
+            padding: 20px;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .cartdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitemimage{
+            width: 100px;
+            display: block;
+        }
+
+        .cartdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitemdescription{
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 3;
+            gap: 5px;
+            width: 450px;
+            & .cartitemname{
+                
+                font-weight: 500;
+            }
+            
+            & .cartitemshortdesc{
+                color: rgb(155, 155, 155);
+                font-size: 15px;
+            }
+        }
+
+
+        .cartdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitempriceanddiscount{
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            gap: 5px;
+            width: 100px;
+            
+            & .cartitemhighprice{
+                color: rgb(155, 155, 155);
+                font-size: 13px;
+                text-decoration: line-through;
+                
+            }
+            & .cartitemprice{
+                font-weight: 500;
+            }
+        }
+
+        .cartdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitemcountarea{
+            padding: 5px;
+            display: flex;
+            flex-grow: 1;
+            gap: 5px;
+            width: 150px;
+
+            & .cartitemcountdecbtn, .cartitemcountincbtn{
+                border: 0.5px solid rgba(0,0,0,0.3);
+                align-self: flex-start;
+                padding:  2px 5px;
+                background-color: #B88E2F;
+                border-radius: 5px;
+                display: inline-block;
+                width: 30px;
+                text-align: center;
+                border: none;
+                cursor: pointer;
+            }
+            & .cartitemcounttext{
+                padding:  2px 5px;
+                align-self: flex-start;
+                display: inline-block;
+                width: 30px;
+                text-align: center;
+                
+            }
+        }
+
+        .cartdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitemfinalprice{
+            
+            padding: 5px;
+            flex-grow: 0;
+            font-weight: 500;
+            text-align: end;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 170px;
+            & .removeitembtn{
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+                overflow: hidden;
+                background-color: #B88E2F;
+                color: #FFFFFF;
+                margin-left: 30px;
+                cursor: pointer;
+            }
+        }
+
+        .cartdisplayarea .carttotaldisplayarea{
+            display: flex;
+            justify-content: end;
+            gap: 30px;
+            padding: 15px;
+        }
+
+        .cartdisplayarea .carttotaldisplayarea .continueshoppingbtnarea{
+            align-self: flex-end;
+        }
+
+
+        .cartdisplayarea .carttotaldisplayarea .continueshoppingbtn{
+            padding: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            color: #000000;
+            border: 2px solid #000000;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-block;
+            font-size: small;
+            text-decoration: none;
+        }
+
+        .cartdisplayarea .carttotaldisplayarea .carttotaldetails{
+            padding: 15px;
+            border: 1px solid rgba(0,0,0,0.3);
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            display: inline-flex;
+            flex-direction: column;
+            min-width: 400px;
+            
+            
+
+        }
+        .cartdisplayarea .carttotaldisplayarea .carttotaldetails .carttotaldetail1{
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            & .carttotalname{
+                font-weight: 700;
+            }
+            & .carttotalfinalpice{
+                font-weight: 700;
+            }
+        }
+
+        .cartdisplayarea .carttotaldisplayarea .carttotaldetails .carttotaldetail2{
+            padding: 5px;
+            & .carttotalitemcount{
+                color: rgb(155, 155, 155);
+                font-size: 14px;
+            }
+            
+            
+            
+        }
+
+        .cartdisplayarea .carttotaldisplayarea .carttotaldetails .checkoutbtn{
+            padding: 10px 0;
+            background-color: #B88E2F;
+            color: #FFFFFF;
+            font-weight: 500;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 10px;
+        }
 
     </style>
 </head>
@@ -47,6 +272,12 @@
         </div>
     </header>
     <main>
+
+        <div id="maincartcontainer" class="maincartcontainer">
+            
+        <!-- cart list products displayed dynamically here  -->
+
+        </div>
 
     </main>
     <footer>
@@ -119,6 +350,13 @@
     </footer>
     <script src="woodenDreams.js"></script>
     <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.getElementById("maincartcontainer");
+            container.innerHTML = ""; 
+            container.appendChild(createCartLayout());
+        });
+
         updateloginstatus()
         updatecartcount()
         updatewishlistcount()
